@@ -11,3 +11,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+@mixin gradient($direction: right) {
+  background-image: linear-gradient(to $direction, #ffc593, #bc7198, #5a77ff);
+}
