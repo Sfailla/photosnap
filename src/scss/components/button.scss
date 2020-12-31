@@ -1,8 +1,10 @@
 .button {
+  display: block;
   outline: none;
   border: none;
   font-size: 12px;
   font-weight: bold;
+  letter-spacing: 1.9px;
   text-transform: uppercase;
   cursor: pointer;
 
@@ -32,22 +34,45 @@
 
   &__link {
     width: auto;
-    height: 16px;
-    background: transparent;
-    text-align: left;
-    padding-right: 2rem;
-    transition: padding-right 0.3s ease-in;
+    height: 1.6rem;
+    display: inline-flex;
+    text-decoration: none;
+    line-height: 1.6rem;
 
     &:hover {
-      padding-right: 3rem;
+      text-decoration: underline;
+
+      &::after {
+        margin-left: 1rem;
+      }
     }
 
     &--white {
       color: $white;
+
+      &::after {
+        content: '';
+        width: 4.2rem;
+        height: 1.6rem;
+        background: url('../../assets/svg/right-arrow-white.svg') no-repeat center
+          center / contain;
+        margin-left: 2rem;
+        transition: margin-left 0.3s ease-in;
+      }
     }
 
     &--black {
       color: $black;
+
+      &::after {
+        content: '';
+        width: 4.2rem;
+        height: 1.6rem;
+        background: url('../../assets/svg/right-arrow.svg') no-repeat center center /
+          contain;
+        margin-left: 2rem;
+        transition: margin-left 0.3s ease-in;
+      }
     }
   }
 }
