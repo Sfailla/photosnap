@@ -1,0 +1,47 @@
+.hero {
+  width: 100%;
+  height: 100%;
+
+  &__wrapper {
+    height: 100%;
+    background-color: black;
+  }
+
+  &__content {
+    width: 100%;
+    color: $black;
+    @include absolute-center;
+
+    &--initial {
+      color: $white;
+    }
+  }
+
+  &__title {
+    max-width: 38.7rem;
+    margin: 0 auto;
+  }
+
+  &__description {
+    max-width: 38.7rem;
+    margin: 0 auto;
+    color: $lightgrey;
+    padding: 1rem 0 5rem 0;
+  }
+
+  &__cta {
+    max-width: 38.7rem;
+    margin: 0 auto;
+    display: flex;
+  }
+
+  &__image {
+    height: 100%;
+
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
