@@ -1,35 +1,53 @@
 .button {
   outline: none;
   border: none;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
   cursor: pointer;
 
   &__square {
     width: 158px;
     height: 40px;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 
     &--white {
       background-color: white;
-      color: black;
+      color: $black;
     }
 
     &--black {
       background-color: black;
-      color: white;
+      color: $white;
+    }
+
+    &--black,
+    &--white {
+      &:hover {
+        background-color: #dfdfdf;
+        color: $black;
+      }
     }
   }
 
   &__link {
-    width: 128.86px;
+    width: auto;
     height: 16px;
-    font-size: 12px;
-    font-weight: bold;
+    background: transparent;
+    text-align: left;
+    padding-right: 2rem;
+    transition: padding-right 0.3s ease-in;
+
+    &:hover {
+      padding-right: 3rem;
+    }
 
     &--white {
-      color: white;
+      color: $white;
     }
 
     &--black {
-      color: black;
+      color: $black;
     }
   }
 }
