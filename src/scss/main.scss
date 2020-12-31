@@ -6,12 +6,25 @@
                             COMPONENTS
 ===================================================================== */
 
+// TYPOGRAPHY
+@import './components/typography.scss';
+
 // BUTTON
 @import './components/button.scss';
+
+/* ==================================================================
+                            LAYOUTS
+===================================================================== */
+
+// JUMBOTRON
+@import './layouts/jumbotron.scss';
 
 /* ==================================================================
                             HOME PAGE
 ===================================================================== */
 
-// HEADER STYLES
-@import './home/header.scss';
+// HEADER
+@import './pages/home/header.scss';
+
+// HERO
+@import './pages/home/hero.scss';
