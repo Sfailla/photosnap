@@ -8,7 +8,7 @@
     height: 16px;
   }
 
-  & .wrapper {
+  & .layout-wrapper {
     @include flex(space-between, center);
   }
 
