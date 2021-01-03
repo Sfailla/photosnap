@@ -12,6 +12,15 @@
 // BUTTON
 @import './components/button.scss';
 
+// HEADER
+@import './components/header.scss';
+
+// FOOTER
+@import './components/footer.scss';
+
+// NAVIGATION
+@import './components/navigation.scss';
+
 /* ==================================================================
                             LAYOUTS
 ===================================================================== */
@@ -22,9 +31,6 @@
 /* ==================================================================
                             HOME PAGE
 ===================================================================== */
-
-// HEADER
-@import './pages/home/header.scss';
 
 // HERO
 @import './pages/home/hero.scss';

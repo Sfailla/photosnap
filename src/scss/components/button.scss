@@ -47,16 +47,22 @@
       }
     }
 
+    &--no-decoration {
+      @extend .button__link, :hover;
+      text-decoration: none;
+    }
+
     &--white {
       color: $white;
 
       &::after {
         content: '';
+        display: inline-block;
         width: 4.2rem;
         height: 1.6rem;
         background: url('../../assets/svg/right-arrow-white.svg') no-repeat center
           center / contain;
-        margin-left: 2rem;
+        margin-left: 2.6rem;
         transition: margin-left 0.3s ease-in;
       }
     }
@@ -70,7 +76,7 @@
         height: 1.6rem;
         background: url('../../assets/svg/right-arrow.svg') no-repeat center center /
           contain;
-        margin-left: 2rem;
+        margin-left: 2.6rem;
         transition: margin-left 0.3s ease-in;
       }
     }
