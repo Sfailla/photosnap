@@ -1,0 +1,123 @@
+.footer {
+  width: 100%;
+  height: 25rem;
+  background-color: black;
+  padding: 6.4rem 4rem;
+  @include flex(center, center);
+
+  &__container {
+    width: 100%;
+    height: 12.2rem;
+  }
+
+  &__content {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    color: white;
+    grid-template-columns: 27.9rem 1fr 1fr;
+    grid-template-rows: min-content 1fr min-content;
+
+    & .logo {
+      grid-column: 1 / 2;
+      grid-row: 1 / 2;
+    }
+
+    & .social {
+      grid-column: 1 / 2;
+      grid-row: 3 / 4;
+
+      & a {
+        width: 2rem;
+        height: 2rem;
+        display: inline-flex;
+
+        & .icon {
+          width: 100%;
+          height: 100%;
+        }
+
+        & span {
+          transition: all 0.3s ease-in-out;
+        }
+
+        & .facebook {
+          background: url('../../assets/svg/facebook.svg') no-repeat center / cover;
+        }
+
+        &:hover .facebook {
+          background: url('../../assets/shared/desktop/facebook.svg') no-repeat
+            center / cover;
+        }
+
+        & .youtube {
+          background: url('../../assets/svg/youtube.svg') no-repeat center / cover;
+        }
+
+        &:hover .youtube {
+          background: url('../../assets/shared/desktop/youtube.svg') no-repeat center /
+            cover;
+        }
+
+        & .twitter {
+          background: url('../../assets/svg/twitter.svg') no-repeat center / cover;
+        }
+
+        &:hover .twitter {
+          background: url('../../assets/shared/desktop/twitter.svg') no-repeat center /
+            cover;
+        }
+
+        & .pinterest {
+          background: url('../../assets/svg/pinterest.svg') no-repeat center / cover;
+        }
+
+        &:hover .pinterest {
+          background: url('../../assets/shared/desktop/pinterest.svg') no-repeat
+            center / cover;
+        }
+
+        & .instagram {
+          background: url('../../assets/svg/instagram.svg') no-repeat center / cover;
+        }
+
+        &:hover .instagram {
+          background: url('../../assets/shared/desktop/instagram.svg') no-repeat
+            center / cover;
+        }
+      }
+
+      & a:not(:first-of-type) {
+        margin-left: 1.3rem;
+      }
+    }
+
+    & span {
+      font-size: 15px;
+      font-weight: normal;
+      line-height: 2;
+    }
+
+    & .link {
+      grid-column: 3 / 4;
+      grid-row: 1 / 2;
+      justify-self: flex-end;
+    }
+
+    & .copywrite {
+      opacity: 0.5;
+      grid-column: 3 / 4;
+      grid-row: 3 / 4;
+      justify-self: flex-end;
+
+      & span {
+        white-space: nowrap;
+      }
+    }
+  }
+
+  &__nav {
+    grid-column: 2 / 3;
+    grid-row: 1 / -1;
+  }
+}
