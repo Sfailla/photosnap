@@ -18,6 +18,10 @@
     grid-template-columns: 27.9rem 1fr 1fr;
     grid-template-rows: min-content 1fr min-content;
 
+    & > * {
+      align-self: center;
+    }
+
     & .logo {
       grid-column: 1 / 2;
       grid-row: 1 / 2;
@@ -31,6 +35,10 @@
         width: 2rem;
         height: 2rem;
         display: inline-flex;
+
+        &:not(:first-of-type) {
+          margin-left: 1.3rem;
+        }
 
         & .icon {
           width: 100%;
@@ -86,10 +94,6 @@
             center / cover;
         }
       }
-
-      & a:not(:first-of-type) {
-        margin-left: 1.3rem;
-      }
     }
 
     & span {
@@ -119,5 +123,20 @@
   &__nav {
     grid-column: 2 / 3;
     grid-row: 1 / -1;
+
+    & nav ul {
+      height: 100%;
+      align-items: flex-start;
+      flex-direction: column;
+
+      @include breakpoint($tablet) {
+        flex-direction: row;
+      }
+    }
+
+    @include breakpoint($tablet) {
+      grid-column: 1 / 2;
+      grid-row: 2 / 3;
+    }
   }
 }

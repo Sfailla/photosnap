@@ -15,3 +15,21 @@
 @mixin gradient($direction: right) {
   background-image: linear-gradient(to $direction, #ffc593, #bc7198, #5a77ff);
 }
+
+$desktop-lg: 1441;
+$desktop: 1440;
+$tablet: 768;
+$phone: 550;
+$phone-sm: 375;
+
+@mixin breakpoint($size) {
+  @if $size == $desktop-lg {
+    @media (min-width: 1441px) {
+      @content;
+    }
+  } @else {
+    @media (max-width: $size + 'px') {
+      @content;
+    }
+  }
+}
