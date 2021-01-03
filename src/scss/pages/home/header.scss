@@ -15,32 +15,5 @@
   &__nav {
     width: 267px;
     margin: 0 5px;
-
-    & ul {
-      width: 100%;
-      max-width: 267px;
-      min-width: 0;
-      height: 16px;
-      @include flex(space-between, center);
-
-      & .nav-item {
-        list-style: none;
-        text-transform: uppercase;
-        font-weight: bold;
-
-        & .nav-link {
-          display: inline-block;
-          color: $black;
-          text-decoration: none;
-          transition: color 0.3s ease-in-out;
-        }
-      }
-    }
-  }
-
-  &__nav ul .nav-item .nav-link {
-    &:hover {
-      color: $lightgrey;
-    }
   }
 }
