@@ -6,7 +6,7 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
 
-    @media (max-width: 62.5em) {
+    @include breakpoint($max, $desktop-sm) {
       grid-template-columns: repeat(2, 1fr);
     }
   }
@@ -15,7 +15,6 @@
     width: 100%;
     height: 50rem;
     position: relative;
-    transition: transform 0.3s ease-in-out;
 
     &::before {
       content: '';
@@ -55,10 +54,12 @@
       width: 100%;
       height: 100%;
       position: absolute;
+      max-width: 100%;
 
       & > img {
         width: 100%;
         height: 100%;
+        max-width: 100%;
         object-fit: cover;
       }
     }
@@ -71,12 +72,13 @@
       color: $white;
       padding: 0 4rem 4rem 4rem;
       z-index: 5;
+      transition: padding 0.3s ease-in-out;
 
       @media (max-width: 78.125em) {
         padding: 0 2rem 4rem 2rem;
       }
 
-      @media (max-width: 68.75em) {
+      @include breakpoint($max, $desktop-sm) {
         padding: 0 4rem 4rem 4rem;
       }
 

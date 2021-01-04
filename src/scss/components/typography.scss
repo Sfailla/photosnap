@@ -7,6 +7,12 @@
     font-size: 40px;
     line-height: 48px;
     letter-spacing: 4.17px;
+
+    @include breakpoint($max, $tablet) {
+      font-size: 3.2rem;
+      line-height: 4rem;
+      letter-spacing: 0.333%;
+    }
   }
 
   &--lg {

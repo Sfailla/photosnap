@@ -24,31 +24,58 @@
       <div class="header__logo">
         <img src="../assets/svg/logo.svg" alt="photosnap-logo">
       </div>
-      <div class="header__nav">
-        <nav class="nav">
-          <ul class="nav__container">
-            <li class="nav-item">
-              <a class="nav-link heading--sm" href="/stories.html">stories</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link heading--sm" href="/">features</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link heading--sm" href="/">pricing</a>
-            </li>
-          </ul>
-        </nav>
+
+      <!--NAVIGATION --DESKTOP-->
+      <div class="header__container--desktop">
+        <div class="header__nav">
+          <nav class="nav">
+            <ul class="nav__container">
+              <li class="nav-item">
+                <a class="nav-link heading--sm" href="/stories.html">stories</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link heading--sm" href="/">features</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link heading--sm" href="/">pricing</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="header__cta">
+          <button class="button button__square button__square--black">get an invite</button>
+        </div>
       </div>
-      <div class="header__cta">
-        <button class="button button__square button__square--black">get an invite</button>
+
+      <!-- NAVIGATION --MOBILE-->
+      <div class="header__container--mobile">
+        <div class="header__nav header__nav--desktop">
+          <nav class="nav">
+            <ul class="nav__container">
+              <li class="nav-item">
+                <a class="nav-link heading--sm" href="/stories.html">stories</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link heading--sm" href="/">features</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link heading--sm" href="/">pricing</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="header__cta">
+          <button class="button button__square button__square--black">get an invite</button>
+        </div>
       </div>
+
     </div>
   </header>
 
   <!-- HERO SECTION -->
   <section class="hero">
-    <div class="jumbotron__row">
-      <div class="jumbotron__row--left">
+    <div class="jumbotron__row jumbotron__row--large">
+      <div class="jumbotron__row--content">
         <div class="hero__container">
           <div class="hero__content hero__content--initial">
             <div class="hero__wrapper">
@@ -65,15 +92,19 @@
         </div>
 
       </div>
-      <div class="jumbotron__row--right">
+      <div class="jumbotron__row--image">
         <div class="hero__image">
-          <img src="../assets/home/desktop/create-and-share.jpg" alt="hero-section-image">
+          <picture>
+            <source srcset="../assets/home/mobile/create-and-share.jpg" media="(max-width: 580px)">
+            <source srcset="../assets/home/tablet/create-and-share.jpg" media="(max-width: 1000px)">
+            <img src="../assets/home/desktop/create-and-share.jpg" alt="hero-section-image">
+          </picture>
         </div>
       </div>
     </div>
 
     <div class="jumbotron__row jumbotron__row--reverse">
-      <div class="jumbotron__row--left">
+      <div class="jumbotron__row--content">
         <div class="hero__content">
           <h1 class="hero__title heading--xl">Beautiful stories every time</h1>
           <p class="hero__description">
@@ -86,15 +117,19 @@
           </div>
         </div>
       </div>
-      <div class="jumbotron__row--right">
+      <div class="jumbotron__row--image">
         <div class="hero__image">
-          <img src="../assets/home/desktop/beautiful-stories.jpg" alt="hero-section-image">
+          <picture>
+            <source srcset="../assets/home/mobile/beautiful-stories.jpg" media="(max-width: 580px)">
+            <source srcset="../assets/home/tablet/beautiful-stories.jpg" media="(max-width: 1000px)">
+            <img src="../assets/home/desktop/beautiful-stories.jpg" alt="hero-section-image">
+          </picture>
         </div>
       </div>
     </div>
 
     <div class="jumbotron__row">
-      <div class="jumbotron__row--left">
+      <div class="jumbotron__row--content">
         <div class="hero__content">
           <h1 class="hero__title heading--xl">Designed for everyone</h1>
           <p class="hero__description">
@@ -106,9 +141,13 @@
           </div>
         </div>
       </div>
-      <div class="jumbotron__row--right">
+      <div class="jumbotron__row--image">
         <div class="hero__image">
-          <img src="../assets/home/desktop/designed-for-everyone.jpg" alt="hero-section-image">
+          <picture>
+            <source srcset="../assets/home/mobile/designed-for-everyone.jpg" media="(max-width: 580px)">
+            <source srcset="../assets/home/tablet/designed-for-everyone.jpg" media="(max-width: 1000px)">
+            <img src="../assets/home/desktop/designed-for-everyone.jpg" alt="hero-section-image">
+          </picture>
         </div>
       </div>
     </div>

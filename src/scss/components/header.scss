@@ -6,14 +6,38 @@
 
   &__logo {
     height: 16px;
+    flex: 1 1 0;
   }
 
   & .layout-wrapper {
     @include flex(space-between, center);
   }
 
+  &__container {
+    width: 100%;
+    height: 100%;
+
+    &--desktop {
+      flex: 2 1 0;
+      @include flex(space-between, center);
+
+      @include breakpoint($max, $tablet - 1) {
+        display: none;
+      }
+    }
+
+    &--mobile {
+      display: none;
+    }
+  }
+
   &__nav {
     width: 267px;
     margin: 0 5px;
+  }
+
+  &__cta {
+    flex: 1 1 0;
+    @include flex(flex-end, center);
   }
 }
