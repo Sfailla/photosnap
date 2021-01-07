@@ -2,12 +2,29 @@
   width: 100%;
   height: 25rem;
   background-color: black;
-  padding: 6.4rem 4rem;
+  padding: 6.4rem 3.95rem;
   @include flex(center, center);
+
+  @include breakpoint($max, $desktop-sm) {
+    height: 28.4rem;
+  }
+
+  @include breakpoint($max, $tablet-sm) {
+    height: 53.9rem;
+    padding: 5.3rem 3.25rem;
+  }
 
   &__container {
     width: 100%;
     height: 12.2rem;
+
+    @include breakpoint($max, $desktop-sm) {
+      height: 15.6rem;
+    }
+
+    @include breakpoint($max, $tablet-sm) {
+      height: 42.7rem;
+    }
   }
 
   &__content {
@@ -15,21 +32,38 @@
     height: 100%;
     display: grid;
     color: white;
-    grid-template-columns: 27.9rem 1fr 1fr;
-    grid-template-rows: min-content 1fr min-content;
+    grid-template-columns: 27.9rem 25.5rem 1fr;
+    grid-template-rows: 1fr 2rem;
+
+    @include breakpoint($max, $desktop-sm) {
+      grid-template-columns: 31.3rem 1fr;
+      grid-template-rows: 4.8rem 1fr 2rem;
+    }
+
+    @include breakpoint($max, $tablet-sm) {
+      grid-template-columns: 1fr;
+      grid-template-rows: 4.8rem 6.9rem 1fr 5rem 2rem;
+      justify-items: center;
+    }
 
     & > * {
-      align-self: center;
     }
 
     & .logo {
-      grid-column: 1 / 2;
-      grid-row: 1 / 2;
+      @include breakpoint($max, $tablet-sm) {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+      }
     }
 
     & .social {
-      grid-column: 1 / 2;
-      grid-row: 3 / 4;
+      @include breakpoint($max, $desktop-sm) {
+        grid-row: 3 / 4;
+      }
+
+      @include breakpoint($max, $tablet-sm) {
+        grid-row: 2 / 3;
+      }
 
       & a {
         width: 2rem;
@@ -99,23 +133,42 @@
     & span {
       font-size: 15px;
       font-weight: normal;
-      line-height: 2;
+      white-space: nowrap;
     }
 
     & .link {
+      justify-self: flex-end;
       grid-column: 3 / 4;
       grid-row: 1 / 2;
-      justify-self: flex-end;
+
+      @include breakpoint($max, $desktop-sm) {
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+      }
+
+      @include breakpoint($max, $tablet-sm) {
+        grid-column: 1 / 2;
+        grid-row: 4 / 5;
+        justify-self: center;
+      }
     }
 
     & .copywrite {
       opacity: 0.5;
+
       grid-column: 3 / 4;
-      grid-row: 3 / 4;
+      grid-row: 2 / 3;
       justify-self: flex-end;
 
-      & span {
-        white-space: nowrap;
+      @include breakpoint($max, $desktop-sm) {
+        grid-column: 2 / 3;
+        grid-row: 3 / 4;
+      }
+
+      @include breakpoint($max, $tablet-sm) {
+        grid-column: 1 / 2;
+        grid-row: 5 / 6;
+        justify-self: center;
       }
     }
   }
@@ -124,19 +177,30 @@
     grid-column: 2 / 3;
     grid-row: 1 / -1;
 
+    @include breakpoint($max, $desktop-sm) {
+      grid-column: 1 / 2;
+      grid-row: 2 / 3;
+    }
+
+    @include breakpoint($max, $tablet-sm) {
+      grid-row: 3 / 4;
+    }
+
     & nav ul {
       height: 100%;
+      margin: 0;
       align-items: flex-start;
       flex-direction: column;
 
-      @include breakpoint($max, $tablet) {
+      @include breakpoint($max, $desktop-sm) {
         flex-direction: row;
       }
-    }
 
-    @include breakpoint($max, $tablet) {
-      grid-column: 1 / 2;
-      grid-row: 2 / 3;
+      @include breakpoint($max, $tablet-sm) {
+        height: 12.1rem;
+        align-items: center;
+        flex-direction: column;
+      }
     }
   }
 }
