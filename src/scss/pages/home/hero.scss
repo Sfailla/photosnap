@@ -5,6 +5,7 @@
   &__container {
     height: 100%;
     background-color: black;
+    position: relative;
   }
 
   &__wrapper {
@@ -14,8 +15,15 @@
       width: 6px;
       @include gradient(top);
       position: absolute;
-      top: 0;
       left: 0;
+
+      @include breakpoint($max, $phone) {
+        top: -54px;
+        left: 94.5px;
+        width: 128px;
+        height: 6px;
+        @include gradient(right);
+      }
     }
   }
 

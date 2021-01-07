@@ -21,7 +21,7 @@
       flex: 2 1 0;
       @include flex(space-between, center);
 
-      @include breakpoint($max, $tablet - 1) {
+      @include breakpoint($max, $tablet) {
         display: none;
       }
     }

@@ -9,6 +9,10 @@
     @include breakpoint($max, $desktop-sm) {
       grid-template-columns: repeat(2, 1fr);
     }
+
+    @include breakpoint($max, $phone) {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__card {
@@ -74,12 +78,16 @@
       z-index: 5;
       transition: padding 0.3s ease-in-out;
 
-      @media (max-width: 78.125em) {
+      @include breakpoint($max, 1200) {
         padding: 0 2rem 4rem 2rem;
       }
 
       @include breakpoint($max, $desktop-sm) {
         padding: 0 4rem 4rem 4rem;
+      }
+
+      @include breakpoint($max, $tablet) {
+        padding: 0 2rem 4rem 2rem;
       }
 
       & .title {
