@@ -3,61 +3,113 @@
   height: 100%;
 
   &__container {
-    height: 100%;
-    background-color: black;
-    position: relative;
+    width: 100%;
+    height: 60rem;
+
+    display: flex;
+    align-items: center;
+
+    @include breakpoint($max, $tablet-sm) {
+      padding: 0 2.4rem 7.2rem 3.3rem;
+    }
+
+    @include breakpoint($max, $phone) {
+      height: 41.9rem;
+    }
+
+    @include breakpoint($min, $phone) {
+      padding: 0;
+    }
+
+    &--large {
+      background-color: black;
+      height: 65rem;
+
+      @include breakpoint($max, $phone) {
+        height: 41.9rem;
+      }
+    }
   }
 
   &__wrapper {
-    &::before {
-      content: '';
-      height: 100%;
-      width: 6px;
-      @include gradient(top);
-      position: absolute;
-      left: 0;
+    position: relative;
 
-      @include breakpoint($max, $phone) {
-        top: -54px;
-        left: 94.5px;
-        width: 128px;
-        height: 6px;
-        @include gradient(right);
-      }
+    @include breakpoint($min, $phone) {
+      max-width: 38.7rem;
+      margin: 0 auto;
     }
   }
 
   &__content {
     width: 100%;
     color: $black;
-    @include absolute-center;
-    padding: 0 2rem;
+    position: relative;
+
+    @include breakpoint($max, $phone) {
+      height: 100%;
+      padding-top: 8rem;
+    }
+
+    @include breakpoint($min, $phone) {
+      padding: 0 2.4rem;
+    }
 
     &--initial {
       color: $white;
+
+      &::before {
+        content: '';
+        height: 100%;
+        width: 6px;
+        @include gradient(top);
+        position: absolute;
+        left: 0;
+
+        @include breakpoint($max, $phone - 1) {
+          width: 12.8rem;
+          height: 6px;
+          @include gradient(right);
+          top: 0;
+        }
+      }
     }
   }
 
   &__title {
-    max-width: 38.7rem;
-    margin: 0 auto;
+    @include breakpoint($min, $phone) {
+      max-width: 38.7rem;
+    }
   }
 
   &__description {
-    max-width: 38.7rem;
-    margin: 0 auto;
     color: $lightgrey;
-    padding: 1rem 0 5rem 0;
+    padding: 1.5rem 0 2rem 0;
+
+    @include breakpoint($min, $phone) {
+      max-width: 38.7rem;
+    }
   }
 
   &__cta {
+    width: 100%;
     max-width: 38.7rem;
-    margin: 0 auto;
     display: flex;
   }
 
   &__image {
-    height: 100%;
+    height: 60rem;
+
+    @include breakpoint($max, $phone) {
+      height: 27.1rem;
+    }
+
+    &--large {
+      height: 65rem;
+
+      @include breakpoint($max, $phone) {
+        height: 29.4rem;
+      }
+    }
 
     & img {
       width: 100%;

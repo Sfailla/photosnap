@@ -8,10 +8,10 @@
     line-height: 48px;
     letter-spacing: 4.17px;
 
-    @include breakpoint($max, $tablet) {
+    @include breakpoint($max, $tablet - 1) {
       font-size: 3.2rem;
       line-height: 4rem;
-      letter-spacing: 0.333%;
+      letter-spacing: 3.33px;
     }
   }
 
