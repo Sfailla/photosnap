@@ -1,3 +1,7 @@
+/*=========================================================
+                        MIXINS
+=========================================================*/
+
 @mixin flex($justify, $align, $direction: row) {
   display: flex;
   flex-direction: $direction;
@@ -15,6 +19,10 @@
 @mixin gradient($direction: right) {
   background-image: linear-gradient(to $direction, #ffc593, #bc7198, #5a77ff);
 }
+
+/*=========================================================
+                        DEVICE SCREENSIZE
+=========================================================*/
 
 // SCREEN SIZES
 $desktop-lg: 1441;
@@ -40,5 +48,18 @@ $max: max-width;
     @media ($max: $screen-size + 'px') {
       @content;
     }
+  }
+}
+
+/*=========================================================
+                        ANIMATIONS
+=========================================================*/
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }
