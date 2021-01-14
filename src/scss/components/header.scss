@@ -1,16 +1,11 @@
 .header {
   width: 100%;
-  height: 72px;
+  height: auto;
   background-color: white;
-  padding: 0 2.4rem;
 
   &__logo {
+    display: inline;
     height: 16px;
-    flex: 1 1 0;
-  }
-
-  & .layout-wrapper {
-    @include flex(space-between, center);
   }
 
   &__container {
@@ -18,19 +13,34 @@
     height: 100%;
 
     &--desktop {
-      flex: 2 1 0;
-      @include flex(space-between, center);
+      width: 100%;
+      height: 7.2rem;
+      background-color: white;
+      padding: 0 2.4rem;
+      position: relative;
+      z-index: 10;
 
-      @include breakpoint($max, $tablet) {
-        display: none;
-      }
+      @include flex(space-between, center);
     }
 
     &--mobile {
       display: none;
 
-      @include breakpoint($max, $tablet) {
+      @include breakpoint($max, $tablet - 1) {
         display: block;
+        background: white;
+        width: 100%;
+        height: 25.3rem;
+        position: absolute;
+        left: 0;
+        z-index: 5;
+        transform: translateY(-32.5rem);
+        transition: transform 0.2s ease-in;
+
+        &.open {
+          transition: transform 0.5s ease-in 0.2s;
+          transform: translateY(0);
+        }
       }
     }
   }
@@ -38,32 +48,87 @@
   &__nav {
     width: 267px;
     margin: 0 5px;
+
+    @include breakpoint($max, $tablet - 1) {
+      display: none;
+    }
   }
 
   &__cta {
-    flex: 1 1 0;
-    @include flex(flex-end, center);
+    @include breakpoint($max, $tablet - 1) {
+      display: none;
+    }
   }
 }
 
+// MOBILE MENU
 .menu {
-  width: 100%;
-  height: 100%;
-  display: none;
+  width: 2rem;
+  height: 2rem;
+  position: relative;
+  outline: none;
+  @include flex(center, center);
 
-  &__menu-button {
-    & span {
-      display: block;
-      width: 2rem;
-      height: 2px;
-      background-color: black;
+  &.open {
+    & .menu__container {
+      animation: spin 0.5s ease-in 0.2s;
+
+      &::before {
+        top: 3px;
+        transform: rotate(-45deg);
+      }
 
       &::after {
-        content: '';
-        width: 2rem;
-        height: 2px;
-        background-color: black;
+        bottom: 2px;
+        transform: rotate(45deg);
       }
+    }
+  }
+
+  &__button {
+    width: 2rem;
+    height: 2rem;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  &__container {
+    width: 2rem;
+    height: 6px;
+    position: relative;
+    transition: all 0.3s linear;
+
+    &::before {
+      content: '';
+      width: 2rem;
+      height: 1px;
+      background-color: black;
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      transition: transform 0.2s ease-in-out;
+    }
+
+    &::after {
+      content: '';
+      width: 2rem;
+      height: 1px;
+      background-color: black;
+      position: absolute;
+      bottom: 0px;
+      left: 0;
+
+      transition: transform 0.2s ease-in-out;
+    }
+
+    @include breakpoint($min, $tablet) {
+      display: none;
     }
   }
 }

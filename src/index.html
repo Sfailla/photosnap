@@ -21,12 +21,12 @@
   <!-- HEADER -->
   <header class="header">
     <div class="layout-wrapper">
-      <div class="header__logo">
-        <img src="../assets/svg/logo.svg" alt="photosnap-logo">
-      </div>
 
       <!--NAVIGATION --DESKTOP-->
       <div class="header__container--desktop">
+        <div class="header__logo">
+          <img src="../assets/svg/logo.svg" alt="photosnap-logo">
+        </div>
         <div class="header__nav">
           <nav class="nav">
             <ul class="nav__container">
@@ -45,40 +45,19 @@
         <div class="header__cta">
           <button class="button button__square button__square--black">get an invite</button>
         </div>
-      </div>
 
-      <!-- NAVIGATION --MOBILE-->
-      <div class="menu">
-
-        <button class="menu__button">
-          <!-- <input type="checkbox"> -->
-          <span></span>
-        </button>
-        <div class="header__container--mobile">
-          <!-- <div class="header__mobile-menu">
-            <div class="header__nav header__nav--mobile">
-              <nav class="nav">
-                <ul class="nav__container">
-                  <li class="nav-item">
-                    <a class="nav-link heading--sm" href="/stories.html">stories</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link heading--sm" href="/">features</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link heading--sm" href="/">pricing</a>
-                  </li>
-                </ul>
-              </nav>
-            </div>
-            <div class="header__cta">
-              <button class="button button__square button__square--black">get an invite</button>
-            </div>
-          </div> -->
+        <div id="menu" class="menu">
+          <button id="menu-button" class="menu__button">
+            <div class="menu__container"></div>
+          </button>
         </div>
       </div>
 
+      <!-- NAVIGATION --MOBILE-->
+      <div id="drawer" class="header__container--mobile"></div>
     </div>
+
+
   </header>
 
   <!-- HERO SECTION -->
@@ -320,5 +299,7 @@
   </footer>
 
 </body>
+
+<script type="application/javascript" src="js/main.js"></script>
 
 </html>
