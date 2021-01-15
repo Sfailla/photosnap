@@ -8,7 +8,7 @@
     height: 1.6rem;
     @include flex(space-between, center);
 
-    &--horizontal {
+    &--vertical {
       height: 100%;
       flex-direction: column;
       align-items: flex-start;

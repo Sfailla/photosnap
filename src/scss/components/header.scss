@@ -1,6 +1,7 @@
 .header {
   width: 100%;
   height: auto;
+  padding: 0 2.4rem;
   background-color: white;
 
   &__logo {
@@ -16,7 +17,6 @@
       width: 100%;
       height: 7.2rem;
       background-color: white;
-      padding: 0 2.4rem;
       position: relative;
       z-index: 10;
 
@@ -24,39 +24,85 @@
     }
 
     &--mobile {
-      display: none;
+      display: block;
+      background: white;
+      width: 100%;
+      height: 25.3rem;
+      padding: 3.2rem;
+      position: absolute;
+      left: 0;
+      z-index: 5;
+      transform: translateY(-32.5rem);
+      transition: transform 0.2s ease-in;
 
-      @include breakpoint($max, $tablet - 1) {
-        display: block;
-        background: white;
-        width: 100%;
-        height: 25.3rem;
-        position: absolute;
-        left: 0;
-        z-index: 5;
-        transform: translateY(-32.5rem);
-        transition: transform 0.2s ease-in;
+      &.open {
+        transition: transform 0.5s ease-in 0.2s;
+        transform: translateY(0);
+      }
 
-        &.open {
-          transition: transform 0.5s ease-in 0.2s;
-          transform: translateY(0);
-        }
+      @include breakpoint($min, $tablet) {
+        display: none;
       }
     }
   }
 
-  &__nav {
-    width: 267px;
-    margin: 0 5px;
+  // desktop cta button styles
+  & .cta {
+    display: none;
 
-    @include breakpoint($max, $tablet - 1) {
-      display: none;
+    @include breakpoint($min, $tablet) {
+      display: block;
     }
   }
 
-  &__cta {
-    @include breakpoint($max, $tablet - 1) {
-      display: none;
+  &__nav {
+    &--desktop {
+      width: 267px;
+      margin: 0 5px;
+
+      @include breakpoint($max, $tablet - 1) {
+        display: none;
+      }
+    }
+
+    &--mobile {
+      @include flex(center, center, column);
+      gap: 2rem;
+
+      & nav ul li {
+        width: 100%;
+        height: 2rem;
+        max-width: 31rem;
+        margin: 0 auto;
+
+        @include flex(center, center);
+
+        & a {
+          font-size: 1.5rem;
+          font-weight: bold;
+        }
+      }
+
+      & nav ul li:not(:last-of-type) {
+        margin-bottom: 2rem;
+      }
+
+      & .divider {
+        width: 100%;
+        max-width: 31rem;
+        height: 1px;
+        background-color: black;
+      }
+
+      & .cta {
+        width: 100%;
+        max-width: 31rem;
+        display: block;
+
+        @include breakpoint($min, $tablet) {
+          display: none;
+        }
+      }
     }
   }
 }
@@ -126,9 +172,9 @@
 
       transition: transform 0.2s ease-in-out;
     }
+  }
 
-    @include breakpoint($min, $tablet) {
-      display: none;
-    }
+  @include breakpoint($min, $tablet) {
+    display: none;
   }
 }
