@@ -21,7 +21,9 @@
   },
   "homepage": "https://github.com/Sfailla/photosnap#readme",
   "devDependencies": {
-    "parcel-bundler": "^1.12.4",
     "sass": "^1.32.0"
+  },
+  "dependencies": {
+    "parcel-bundler": "^1.12.4"
   }
 }
