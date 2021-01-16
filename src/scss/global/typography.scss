@@ -1,0 +1,35 @@
+.heading {
+  font-weight: bold;
+  text-transform: uppercase;
+
+  &--xl {
+    @extend .heading;
+    font-size: 40px;
+    line-height: 49px;
+    letter-spacing: 4.17px;
+
+    @include breakpoint($max, $tablet - 1) {
+      font-size: 3.2rem;
+      line-height: 4rem;
+      letter-spacing: 3.33px;
+    }
+  }
+
+  &--lg {
+    @extend .heading;
+    font-size: 24px;
+    line-height: 25px;
+  }
+  &--md {
+    @extend .heading;
+    font-size: 18px;
+    line-height: 25px;
+    text-transform: none;
+  }
+  &--sm {
+    @extend .heading;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 1.776px;
+  }
+}

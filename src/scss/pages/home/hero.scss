@@ -17,7 +17,7 @@
       height: 41.9rem;
     }
 
-    @include breakpoint($min, $phone) {
+    @include breakpoint($min, $phone + 1) {
       padding: 0;
     }
 
@@ -34,7 +34,7 @@
   &__wrapper {
     position: relative;
 
-    @include breakpoint($min, $phone) {
+    @include breakpoint($min, $phone + 1) {
       max-width: 38.7rem;
       margin: 0 auto;
     }
@@ -50,7 +50,7 @@
       padding-top: 8rem;
     }
 
-    @include breakpoint($min, $phone) {
+    @include breakpoint($min, $phone + 1) {
       padding: 0 2.4rem;
     }
 
@@ -65,7 +65,7 @@
         position: absolute;
         left: 0;
 
-        @include breakpoint($max, $phone - 1) {
+        @include breakpoint($max, $phone) {
           width: 12.8rem;
           height: 6px;
           @include gradient(right);
@@ -76,24 +76,34 @@
   }
 
   &__title {
-    @include breakpoint($min, $phone) {
+    @include breakpoint($min, $phone + 1) {
       max-width: 38.7rem;
     }
   }
 
   &__description {
     color: $lightgrey;
-    padding: 1.5rem 0 2rem 0;
+    padding: 1.3rem 0 5.3rem 0;
 
-    @include breakpoint($min, $phone) {
+    @include breakpoint($min, $phone + 1) {
       max-width: 38.7rem;
     }
   }
 
+  &__title,
+  &__description,
+  &__cta {
+    margin: 0 auto;
+  }
+
   &__cta {
     width: 100%;
-    max-width: 38.7rem;
+    max-width: 100%;
     display: flex;
+
+    @include breakpoint($min, $phone + 1) {
+      max-width: 38.7rem;
+    }
   }
 
   &__image {

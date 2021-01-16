@@ -1,13 +1,11 @@
 @import './global/base.scss';
 @import './global/mixins.scss';
 @import './global/shared.scss';
+@import './global/typography.scss';
 
 /* ==================================================================
                             COMPONENTS
 ===================================================================== */
-
-// TYPOGRAPHY
-@import './components/typography.scss';
 
 // BUTTON
 @import './components/button.scss';
@@ -45,4 +43,4 @@
                             STORIES PAGE
 ===================================================================== */
 
-@import './pages/stories/hero.scss';
+@import './pages/stories/hero2.scss';
