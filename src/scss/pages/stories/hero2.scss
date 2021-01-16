@@ -1,28 +1,84 @@
 .hero2 {
   width: 100%;
-  height: 65rem;
+  height: 31.7rem;
+  padding-left: 11.2rem;
+
+  transition: padding-left 0.2s ease-in;
+
+  @include breakpoint($max, $tablet) {
+    padding-left: 3.9rem;
+  }
+
+  @include breakpoint($min, $phone) {
+    height: 65rem;
+  }
 
   background: url('../../assets/stories/desktop/moon-of-appalacia.jpg') no-repeat
     center / cover;
+
+  @include flex(flex-start, center);
 
   &__container {
     width: 100%;
     max-width: 38.7rem;
     color: white;
+
+    &--desktop {
+      display: none;
+
+      @include breakpoint($min, $phone) {
+        display: block;
+      }
+    }
+
+    &--mobile {
+      margin: 0 auto;
+    }
+
+    @include breakpoint($max, $tablet) {
+      max-width: 31.8rem;
+    }
   }
 
   &__caption {
   }
 
   &__title {
+    padding: 2rem 0 0.4rem 0;
   }
 
-  &__subtitle {
+  &__text-wrapper {
+    font-size: 1.3rem;
+    height: 1.7rem;
+    display: inline;
+    line-height: 1;
+
+    & .subtitle {
+      display: inline;
+      opacity: 0.6;
+    }
+
+    & span.strong {
+      color: white;
+      opacity: 1;
+    }
   }
 
-  &__discription {
+  &__description {
+    padding: 2rem 0 2.9rem 0;
   }
 
   &__link {
+  }
+
+  &--mobile {
+    width: 100%;
+    height: 49.5rem;
+    background-color: black;
+    padding: 4.8rem 2.85rem;
+
+    @include breakpoint($min, $phone) {
+      display: none;
+    }
   }
 }

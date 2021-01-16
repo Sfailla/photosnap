@@ -6,28 +6,133 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32x32.png">
-  <link rel="stylesheet" href="./scss/main.scss">
 
   <title>Frontend Mentor | Photosnap Website Challenge</title>
 </head>
 
 <body>
 
-  <section class="hero2">
-    <div class="container">
-      <p class="caption heading--sm">last month's featured story</p>
-      <h1 class="title heading--xl">hazy full moon of appalachia</h1>
-      <p class="subtitle">March 2nd 2020<span class="strong">by Jogn Appleseed</span></p>
-      <p class="description">The dissected plateau area, while not actually made up of geological mountains,
+  <!-- HEADER -->
+  <header class="header">
+    <div class="layout-wrapper">
+
+      <!--NAVIGATION --DESKTOP-->
+      <div class="header__container--desktop">
+        <div class="header__logo">
+          <img src="../assets/svg/logo.svg" alt="photosnap-logo">
+        </div>
+        <div class="header__nav--desktop">
+          <nav class="nav">
+            <ul class="nav__container">
+              <li class="nav-item">
+                <a class="nav-link heading--sm" href="./stories.html">stories</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link heading--sm" href="/">features</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link heading--sm" href="/">pricing</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="cta">
+          <button class="button button__square button__square--black">get an invite</button>
+        </div>
+
+        <div id="menu" class="menu">
+          <button id="menu-button" class="menu__button">
+            <div class="menu__container"></div>
+          </button>
+        </div>
+      </div>
+
+      <!-- NAVIGATION --MOBILE-->
+      <div id="drawer" class="header__container--mobile">
+        <div class="header__nav--mobile">
+          <nav class="nav">
+            <ul class="nav__container nav__container--vertical">
+              <li class="nav-item">
+                <a class="nav-link heading--sm" href="./stories.html">stories</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link heading--sm" href="/">features</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link heading--sm" href="/">pricing</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="divider"></div>
+          <div class="cta">
+            <button class="button button__square button__square--lg button__square--black">get an invite</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- NAVIGATION --MOBILE-->
+  <div id="drawer" class="header__container--mobile">
+    <div class="header__nav--mobile">
+      <nav class="nav">
+        <ul class="nav__container nav__container--vertical">
+          <li class="nav-item">
+            <a class="nav-link heading--sm" href="./stories.html">stories</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link heading--sm" href="/">features</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link heading--sm" href="/">pricing</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="divider"></div>
+      <div class="cta">
+        <button class="button button__square button__square--lg button__square--black">get an invite</button>
+      </div>
+    </div>
+  </div>
+  </div>
+  </header>
+
+  <section class=" hero2">
+    <div class="hero2__container hero2__container--desktop">
+      <p class="hero2__caption heading--sm">last month's featured story</p>
+      <h1 class="hero2__title heading--xl">hazy full moon of appalachia</h1>
+      <div class="hero2__text-wrapper">
+        <p class="subtitle">March 2nd 2020</p>
+        <span class="strong"> by Jogn Appleseed</span>
+      </div>
+      <p class="hero2__description text--normal">The dissected plateau area, while not actually made up of geological
+        mountains,
         is popularly called "mountains," especially in eastern Kentucky and West Virginia,
         and while the ridges are not high, the terrain is extremely rugged.</p>
-      <a href="#0" class="button button__link button__link--white link">read the story</a>
+      <a href="#0" class="button button__link button__link--white hero2__link">read the story</a>
     </div>
 
   </section>
 
+  <section class="hero2--mobile">
+    <div class="hero2__container hero2__container--mobile">
+      <p class="hero2__caption heading--sm">last month's featured story</p>
+      <h1 class="hero2__title heading--xl">hazy full moon of appalachia</h1>
+      <div class="hero2__text-wrapper">
+        <p class="subtitle">March 2nd 2020</p>
+        <span class="strong"> by Jogn Appleseed</span>
+      </div>
+      <p class="hero2__description text--normal">The dissected plateau area, while not actually made up of geological
+        mountains,
+        is popularly called "mountains," especially in eastern Kentucky and West Virginia,
+        and while the ridges are not high, the terrain is extremely rugged.</p>
+      <a href="#0" class="button button__link button__link--white hero2__link">read the story</a>
+    </div>
+  </section>
+
 </body>
 
-<script type="application/javascript" src="./js/main.js"></script>
+<script type="application/javascript" src="./js/stories.js"></script>
 
 </html>
