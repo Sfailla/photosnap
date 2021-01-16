@@ -38,11 +38,33 @@
   }
 
   &__link {
-    width: auto;
+    width: 18.2rem;
     height: 1.6rem;
     display: inline-flex;
     text-decoration: none;
     line-height: 1.6rem;
+
+    &::after {
+      content: '';
+      display: inline-block;
+      width: 4.2rem;
+      height: 1.6rem;
+      background: url('../../assets/svg/right-arrow-white.svg') no-repeat center
+        center / contain;
+      transition: margin-left 0.3s ease-in;
+    }
+
+    &--white {
+      @extend .button__link;
+      color: $white;
+    }
+
+    &--black {
+      @extend .button__link;
+      color: $black;
+      background: url('../../assets/svg/right-arrow.svg') no-repeat center center /
+        contain;
+    }
 
     &:hover {
       text-decoration: underline;
@@ -55,35 +77,6 @@
     &--no-decoration {
       @extend .button__link, :hover;
       text-decoration: none;
-    }
-
-    &--white {
-      color: $white;
-
-      &::after {
-        content: '';
-        display: inline-block;
-        width: 4.2rem;
-        height: 1.6rem;
-        background: url('../../assets/svg/right-arrow-white.svg') no-repeat center
-          center / contain;
-        margin-left: 2.6rem;
-        transition: margin-left 0.3s ease-in;
-      }
-    }
-
-    &--black {
-      color: $black;
-
-      &::after {
-        content: '';
-        width: 4.2rem;
-        height: 1.6rem;
-        background: url('../../assets/svg/right-arrow.svg') no-repeat center center /
-          contain;
-        margin-left: 2.6rem;
-        transition: margin-left 0.3s ease-in;
-      }
     }
   }
 }
