@@ -4,32 +4,42 @@
 
   &--xl {
     @extend .heading;
-    font-size: 40px;
-    line-height: 49px;
+    font-size: 4rem;
+    line-height: 4.9rem;
     letter-spacing: 4.17px;
-
-    @include breakpoint($max, $tablet - 1) {
-      font-size: 3.2rem;
-      line-height: 4rem;
-      letter-spacing: 3.33px;
-    }
   }
 
   &--lg {
     @extend .heading;
-    font-size: 24px;
-    line-height: 25px;
+    font-size: 2.4rem;
+    line-height: 2.5rem;
   }
   &--md {
     @extend .heading;
-    font-size: 18px;
-    line-height: 25px;
+    font-size: 1.8rem;
+    line-height: 2.5rem;
     text-transform: none;
   }
   &--sm {
     @extend .heading;
-    font-size: 12px;
-    line-height: 16px;
+    font-size: 1.2rem;
+    line-height: 1.6rem;
     letter-spacing: 1.776px;
+  }
+}
+
+.text {
+  color: white;
+
+  &--small {
+    @extend .text;
+    font-size: 1.3rem;
+  }
+
+  &--normal {
+    @extend .text;
+    font-size: 1.5rem;
+    opacity: 0.6;
+    line-height: 1.65;
   }
 }
