@@ -79,6 +79,12 @@
     @include breakpoint($min, $phone + 1) {
       max-width: 38.7rem;
     }
+
+    @include breakpoint($max, $tablet - 1) {
+      font-size: 3.2rem;
+      line-height: 4rem;
+      letter-spacing: 3.33px;
+    }
   }
 
   &__description {
