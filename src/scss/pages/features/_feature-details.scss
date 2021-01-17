@@ -1,0 +1,63 @@
+.feature-details {
+  width: 100%;
+  height: 100%;
+  padding: 6.4rem 3.25rem 9.6rem 3.25rem;
+
+  @include breakpoint($min, $tablet) {
+    padding: 16rem 3.9rem 16.5rem 3.9rem;
+  }
+
+  &__container {
+    width: 100%;
+    height: 100%;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 3rem;
+    grid-row-gap: 10.9rem;
+    justify-items: center;
+
+    @include breakpoint($max, $desktop-sm) {
+      grid-template-columns: repeat((2, 1fr));
+      grid-column-gap: 1.1rem;
+      grid-row-gap: 7.4rem;
+    }
+
+    @include breakpoint($max, $tablet - 1) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__content {
+    max-width: 35rem;
+    display: grid;
+    grid-template-columns: 35rem;
+    grid-template-rows: 11rem min-content 1fr;
+    justify-content: center;
+
+    @include breakpoint($max, $desktop-sm) {
+      grid-template-columns: minmax(34rem, 35rem);
+    }
+
+    @include breakpoint($max, $phone) {
+      grid-template-columns: minmax(31rem, 35rem);
+    }
+
+    & .icon {
+      @include flex(center, flex-start);
+
+      & .pad-icon {
+        padding-top: 1.8rem;
+      }
+    }
+
+    & .title {
+      text-align: center;
+      padding-bottom: 2.4rem;
+    }
+
+    & .description {
+      text-align: center;
+    }
+  }
+}

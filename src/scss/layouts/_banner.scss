@@ -1,0 +1,66 @@
+.banner {
+  width: 100%;
+  height: 28rem;
+  padding: 6.8rem 3.95rem 6.4rem 3.95rem;
+  background: url('../../assets/shared/desktop/bg-beta.jpg') no-repeat center / cover;
+  @include flex(center, center);
+  position: relative;
+
+  @include breakpoint($min, $tablet-sm + 1) {
+    &::before {
+      content: '';
+      display: block;
+      width: 6px;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      @include gradient(top);
+    }
+  }
+
+  @include breakpoint($max, $tablet-sm) {
+    padding: 0 3.25rem 6.4rem 3.25rem;
+  }
+
+  &__container {
+    width: 100%;
+    height: 14.8rem;
+    @include flex(space-between, center);
+
+    @include breakpoint($max, $tablet-sm) {
+      width: 31rem;
+      height: 100%;
+
+      @include flex(space-between, flex-start, column);
+    }
+  }
+
+  &__wrapper {
+    width: 100%;
+    height: 100%;
+    max-width: 40rem;
+
+    @include breakpoint($max, $tablet-sm) {
+      width: 31rem;
+      height: 12.2rem;
+      position: relative;
+      padding-top: 6.4rem;
+
+      &::before {
+        content: '';
+        display: block;
+        width: 12.8rem;
+        height: 6px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        @include gradient(right);
+      }
+    }
+
+    & h1 {
+      color: white;
+    }
+  }
+}
