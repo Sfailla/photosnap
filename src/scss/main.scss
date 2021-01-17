@@ -1,46 +1,56 @@
-@import './global/base.scss';
-@import './global/mixins.scss';
-@import './global/shared.scss';
-@import './global/typography.scss';
+@import './global/base';
+@import './global/mixins';
+@import './global/shared';
+@import './global/typography';
 
 /* ==================================================================
                             COMPONENTS
 ===================================================================== */
 
 // BUTTON
-@import './components/button.scss';
+@import './components/button';
 
 // HEADER
-@import './components/header.scss';
+@import './components/header';
 
 // FOOTER
-@import './components/footer.scss';
+@import './components/footer';
 
 // NAVIGATION
-@import './components/navigation.scss';
+@import './components/navigation';
 
 /* ==================================================================
                             LAYOUTS
 ===================================================================== */
 
 // JUMBOTRON
-@import './layouts/jumbotron.scss';
+@import './layouts/jumbotron';
+
+// GALLERY
+@import './layouts/gallery';
+
+// BANNER
+@import './layouts/banner';
 
 /* ==================================================================
                             HOME PAGE
 ===================================================================== */
 
 // HERO
-@import './pages/home/hero.scss';
-
-// GALLERY
-@import './pages/home/gallery.scss';
+@import './pages/home/hero';
 
 // DETAILS
-@import './pages/home/details.scss';
+@import './pages/home/details';
 
 /* ==================================================================
                             STORIES PAGE
 ===================================================================== */
 
-@import './pages/stories/hero2.scss';
+@import './pages/stories/stories-hero';
+
+/* ==================================================================
+                            FEATURES PAGE
+===================================================================== */
+
+@import './pages/features/feature-hero';
+@import './pages/features/feature-details';
