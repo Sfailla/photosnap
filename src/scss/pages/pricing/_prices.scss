@@ -233,6 +233,10 @@
       @include breakpoint($max, $desktop-sm) {
         margin-top: 12rem;
       }
+
+      @include breakpoint($max, $tablet - 1) {
+        display: none;
+      }
     }
   }
 
@@ -241,6 +245,12 @@
     max-width: 73.1rem;
     height: 55.1rem;
     margin: 0 auto;
+
+    @include breakpoint($max, $tablet - 1) {
+      padding-top: 6.4rem;
+      height: 100%;
+      max-width: 42rem;
+    }
 
     & .row {
       width: 100%;
@@ -255,6 +265,8 @@
       @include breakpoint($max, $tablet - 1) {
         height: 11.3rem;
         grid-template-columns: 1fr;
+        grid-template-rows: 4rem 2.9rem 1fr;
+        justify-items: flex-start;
       }
 
       &--head {
@@ -269,11 +281,19 @@
           line-height: 1.6rem;
           justify-self: flex-start;
           align-self: flex-start;
+
+          @include breakpoint($max, $tablet - 1) {
+            grid-column: 1 / -1;
+          }
         }
 
         & span.item {
           align-self: flex-start;
           justify-self: center;
+
+          @include breakpoint($max, $tablet - 1) {
+            display: none;
+          }
         }
       }
 
@@ -288,7 +308,7 @@
         max-width: 27rem;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        justify-items: center;
+        justify-items: flex-start;
         align-items: center;
 
         @include breakpoint($min, $tablet) {
@@ -303,8 +323,9 @@
         justify-items: center;
         align-items: center;
 
-        @include breakpoint($max, $tablet) {
+        @include breakpoint($max, $tablet - 1) {
           max-width: 27rem;
+          justify-items: flex-start;
         }
 
         & .item {
