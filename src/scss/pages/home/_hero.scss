@@ -29,6 +29,15 @@
         height: 41.9rem;
       }
     }
+
+    &--small {
+      background-color: black;
+      height: 49rem;
+
+      @include breakpoint($max, $phone) {
+        height: 30rem;
+      }
+    }
   }
 
   &__wrapper {
@@ -120,6 +129,14 @@
 
     &--large {
       height: 65rem;
+
+      @include breakpoint($max, $phone) {
+        height: 29.4rem;
+      }
+    }
+
+    &--small {
+      height: 49rem;
 
       @include breakpoint($max, $phone) {
         height: 29.4rem;

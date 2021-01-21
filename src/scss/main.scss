@@ -19,6 +19,9 @@
 // NAVIGATION
 @import './components/navigation';
 
+// TOGGLE SWITCH
+@import './components/toggle-switch';
+
 /* ==================================================================
                             LAYOUTS
 ===================================================================== */
@@ -54,3 +57,9 @@
 
 @import './pages/features/feature-hero';
 @import './pages/features/feature-details';
+
+/* ==================================================================
+                            PRICES PAGE
+===================================================================== */
+
+@import './pages/pricing/prices';
