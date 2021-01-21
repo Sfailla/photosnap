@@ -1,0 +1,77 @@
+$toggle-gutter: 0.5rem;
+$toggle-width: 6.5rem;
+$toggle-height: 3.2rem;
+$toggle-radius: 50%;
+$toggle-color-monthly: #dfdfdf;
+$toggle-color-yearly: black;
+$toggle-control-size: 2.4rem;
+$toggle-translate: $toggle-width - $toggle-control-size - $toggle-gutter;
+
+.toggle {
+  width: 25.45rem;
+  height: 3.2rem;
+  position: relative;
+  @include flex(space-between, center);
+
+  .option1.active,
+  .option2.active {
+    opacity: 1;
+  }
+
+  & .option {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: black;
+    opacity: 0.5;
+    transition: opacity 0.2s ease-in;
+  }
+
+  & .label {
+    @include absolute-center;
+    width: $toggle-width;
+    height: $toggle-height;
+    user-select: none;
+    outline: none;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+
+    & .input {
+      appearance: none;
+      outline: none;
+
+      &:checked ~ .slider-round {
+        background-color: $toggle-color-yearly;
+
+        &::before {
+          background-color: white;
+          left: $toggle-translate;
+        }
+      }
+    }
+    & .slider-round {
+      display: block;
+      width: $toggle-width;
+      height: $toggle-height;
+      background-color: $toggle-color-monthly;
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-radius: 50px;
+      transition: background-color 0.1s ease-in;
+
+      &::before {
+        content: '';
+        display: block;
+        width: $toggle-control-size;
+        height: $toggle-control-size;
+        background-color: black;
+        border-radius: $toggle-radius;
+        position: absolute;
+        top: 50%;
+        left: 5px;
+        transform: translateY(-50%);
+        transition: left 0.1s ease-in;
+      }
+    }
+  }
+}
