@@ -12,68 +12,296 @@
 
 <body>
 
-  Stories
-  Features
-  Pricing
+  <!-- HEADER -->
+  <header class="header">
+    <div class="layout-wrapper">
 
-  Get an invite
+      <!--NAVIGATION --DESKTOP-->
+      <div class="header__container--desktop">
+        <a href="./index.html" class="header__logo">
+          <img src="../assets/svg/logo.svg" alt="photosnap-logo">
+        </a>
+        <div class="header__nav--desktop">
+          <nav class="nav">
+            <ul class="nav__container">
+              <li class="nav-item">
+                <a class="nav-link heading--sm" href="./stories.html">stories</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link heading--sm" href="./features.html">features</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link heading--sm" href="./pricing.html">pricing</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
 
-  Pricing
+        <div class="cta">
+          <button class="button button__square button__square--black">get an invite</button>
+        </div>
 
-  Create a your stories, Photosnap is a platform for photographers and visual storytellers.
-  It’s the simple way to create and share your photos.
+        <div id="menu" class="menu">
+          <button id="menu-button" class="menu__button">
+            <div class="menu__container"></div>
+          </button>
+        </div>
+      </div>
 
-  Monthly
-  Yearly
+      <!-- NAVIGATION --MOBILE-->
+      <div id="drawer" class="header__container--mobile">
+        <div class="header__nav--mobile">
+          <nav class="nav">
+            <ul class="nav__container nav__container--vertical">
+              <li class="nav-item">
+                <a class="nav-link heading--sm" href="./stories.html">stories</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link heading--sm" href="./features.html">features</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link heading--sm" href="./pricing.html">pricing</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="divider"></div>
+          <div class="cta">
+            <button class="button button__square button__square--lg button__square--black">get an invite</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
 
-  Basic
-  Includes basic usage of our platform. Recommended for new and aspiring photographers.
-  $19.00 per month
-  $190.00 per year
-  Pick Plan
+  <!-- PRICING HERO SECTION -->
+  <section class="hero feature-hero">
+    <div class="jumbotron__row">
+      <div class="jumbotron__row--content">
+        <div class="hero__container hero__container--small">
+          <div class="hero__content hero__content--initial">
+            <div class="hero__wrapper">
+              <h1 class="hero__title heading--lg">Pricing</h1>
+              <p class="hero__description text__normal--white">
+                Create a your stories, Photosnap is a platform for photographers and visual storytellers.
+                It’s the simple way to create and share your photos.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="jumbotron__row--image">
+        <div class="hero__image hero__image--small">
+          <picture>
+            <source srcset="../assets/pricing/mobile/hero.jpg" media="(max-width: 580px)">
+            <source srcset="../assets/pricing/tablet/hero.jpg" media="(max-width: 1000px)">
+            <img src="../assets/pricing/desktop/hero.jpg" alt="hero-section-image" class="feature-hero__image">
+          </picture>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  Pro
-  More advanced features available. Recommended for photography veterans and professionals.
-  $39.00 per month
-  $390.00 per year
-  Pick Plan
+  <section class="prices">
+    <div class="prices__pricing layout-wrapper">
+      <div class="prices__toggle-container">
+        <div class="toggle">
+          <span class="option option1 active">Monthly</span>
+          <span class="option option2">Yearly</span>
+          <label class="label">
+            <input type="checkbox" id="checkbox" class="input">
+            <span class="slider-round"></span>
+          </label>
+        </div>
+      </div>
+      <div class="prices__card-container ">
+        <div class="prices__cards">
+          <div class="prices__card">
+            <h3 class="title">Basic</h3>
+            <p class="description text__normal--black">Includes basic usage of our platform. Recommended for new and
+              aspiring photographers
+            </p>
+            <span class="price price--monthly heading--lg">$19.00</span>
+            <span class="price price--yearly heading--lg">$190.00</span>
+            <p class="subtitle text__normal--black">per month</p>
+            <div class="cta">
+              <button class="button button__square button__square--black">Pick Plan</button>
+            </div>
+          </div>
+          <div class="prices__card--large">
+            <h3 class="title">Pro</h3>
+            <p class="description text__normal--white">More advanced features available. Recommended for photography
+              veterans and professionals
+            </p>
+            <span class="price price--monthly heading--lg">$39.00</span>
+            <span class="price price--yearly heading--lg">$390.00</span>
+            <p class="subtitle text__normal--white">per month</p>
+            <div class="cta">
+              <button class="button button__square button__square--white">Pick Plan</button>
+            </div>
+          </div>
+          <div class="prices__card">
+            <h3 class="title">Business</h3>
+            <p class="description text__normal--black">Additional features available such as more detailed metrics.
+              Recommended for business owners
+            </p>
+            <span class="price price--monthly heading--lg">$99.00</span>
+            <span class="price price--yearly heading--lg">$990.00</span>
+            <p class="subtitle text__normal--black">per month</p>
+            <div class="cta">
+              <button class="button button__square button__square--black">Pick Plan</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-  Business
-  Additional features available such as more detailed metrics. Recommended for business owners.
-  $99.00 per month
-  $990.00 per year
-  Pick Plan
-
-  Compare
-
-  The Features
-
-  Basic
-  Pro
-  Business
-
-  Unlimited Story Posting
-  Unlimited Photo Upload
-  Embedding Custom Content
-  Customize Metadata
-  Advanced Metrics
-  Photo Downloads
-  Search Engine Indexing
-  Custom Analytics
-
-  We're in Beta. Get your invite today!
-
-  Get an invite
-
-  Home
-  Stories
-  Features
-  Pricing
-
-  Get an invite
-
-  Copyright 2019. All Rights Reserved
+    <div class="prices__compare">
+      <h1 class="heading--lg">compare</h1>
+      <div class="prices__table">
+        <div class="row--head">
+          <p class="title heading--sm">The Features</p>
+          <span class="item heading--sm">basic</span>
+          <span class="item heading--sm">pro</span>
+          <span class="item heading--sm">business</span>
+        </div>
+        <div class="row">
+          <p class="title heading--sm">Unlimited Story Posting</p>
+          <div class="label-wrapper">
+            <span class="item heading--sm">basic</span>
+            <span class="item heading--sm">pro</span>
+            <span class="item heading--sm">business</span>
+          </div>
+          <div class="item-wrapper">
+            <span class="item">
+              <img src="../assets/pricing/desktop/check.svg" alt="svg-icon">
+            </span>
+            <span class="item">
+              <img src="../assets/pricing/desktop/check.svg" alt="svg-icon">
+            </span>
+            <span class="item">
+              <img src="../assets/pricing/desktop/check.svg" alt="svg-icon">
+            </span>
+          </div>
+        </div>
+        <div class="row">
+          <p class="title heading--sm">Unlimited photo upload</p>
+          <div class="label-wrapper">
+            <span class="item heading--sm">basic</span>
+            <span class="item heading--sm">pro</span>
+            <span class="item heading--sm">business</span>
+          </div>
+          <div class="item-wrapper">
+            <span class="item">
+              <img src="../assets/pricing/desktop/check.svg" alt="svg-icon">
+            </span>
+            <span class="item">
+              <img src="../assets/pricing/desktop/check.svg" alt="svg-icon">
+            </span>
+            <span class="item">
+              <img src="../assets/pricing/desktop/check.svg" alt="svg-icon">
+            </span>
+          </div>
+        </div>
+        <div class="row">
+          <p class="title heading--sm">Embedding custom content</p>
+          <div class="label-wrapper">
+            <span class="item heading--sm">basic</span>
+            <span class="item heading--sm">pro</span>
+            <span class="item heading--sm">business</span>
+          </div>
+          <div class="item-wrapper">
+            <span class="item"></span>
+            <span class="item">
+              <img src="../assets/pricing/desktop/check.svg" alt="svg-icon">
+            </span>
+            <span class="item">
+              <img src="../assets/pricing/desktop/check.svg" alt="svg-icon">
+            </span>
+          </div>
+        </div>
+        <div class="row">
+          <p class="title heading--sm">Customize metadata</p>
+          <div class="label-wrapper">
+            <span class="item heading--sm">basic</span>
+            <span class="item heading--sm">pro</span>
+            <span class="item heading--sm">business</span>
+          </div>
+          <div class="item-wrapper">
+            <span class="item"></span>
+            <span class="item">
+              <img src="../assets/pricing/desktop/check.svg" alt="svg-icon">
+            </span>
+            <span class="item">
+              <img src="../assets/pricing/desktop/check.svg" alt="svg-icon">
+            </span>
+          </div>
+        </div>
+        <div class="row">
+          <p class="title heading--sm">Advanced metrics</p>
+          <div class="label-wrapper">
+            <span class="item heading--sm">basic</span>
+            <span class="item heading--sm">pro</span>
+            <span class="item heading--sm">business</span>
+          </div>
+          <div class="item-wrapper">
+            <span class="item"></span>
+            <span class="item"></span>
+            <span class="item">
+              <img src="../assets/pricing/desktop/check.svg" alt="svg-icon">
+            </span>
+          </div>
+        </div>
+        <div class="row">
+          <p class="title heading--sm">Photo downloads</p>
+          <div class="label-wrapper">
+            <span class="item heading--sm">basic</span>
+            <span class="item heading--sm">pro</span>
+            <span class="item heading--sm">business</span>
+          </div>
+          <div class="item-wrapper">
+            <span class="item"></span>
+            <span class="item"></span>
+            <span class="item">
+              <img src="../assets/pricing/desktop/check.svg" alt="svg-icon">
+            </span>
+          </div>
+        </div>
+        <div class="row">
+          <p class="title heading--sm">Search engine indexing</p>
+          <div class="label-wrapper">
+            <span class="item heading--sm">basic</span>
+            <span class="item heading--sm">pro</span>
+            <span class="item heading--sm">business</span>
+          </div>
+          <div class="item-wrapper">
+            <span class="item"></span>
+            <span class="item"></span>
+            <span class="item">
+              <img src="../assets/pricing/desktop/check.svg" alt="svg-icon">
+            </span>
+          </div>
+        </div>
+        <div class="row">
+          <p class="title heading--sm">Custom analytics</p>
+          <div class="label-wrapper">
+            <span class="item heading--sm">basic</span>
+            <span class="item heading--sm">pro</span>
+            <span class="item heading--sm">business</span>
+          </div>
+          <div class="item-wrapper">
+            <span class="item"></span>
+            <span class="item"></span>
+            <span class="item">
+              <img src="../assets/pricing/desktop/check.svg" alt="svg-icon">
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
 </body>
+
+<script type="application/javascript" src="js/pricing.js"></script>
 
 </html>

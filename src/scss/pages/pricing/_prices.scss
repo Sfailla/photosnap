@@ -1,0 +1,339 @@
+.prices {
+  width: 100%;
+  height: 100%;
+
+  padding: 12rem 3.9rem 16.1rem 3.9rem;
+
+  @include breakpoint($max, $desktop-sm) {
+    padding: 12rem 16.9rem 11.3rem 16.9rem;
+  }
+
+  @include breakpoint($max, $tablet-lg) {
+    padding: 12rem 3.9rem 11.3rem 3.9rem;
+  }
+
+  &__pricing {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__toggle-container {
+    width: 100%;
+    height: 8rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__card-container {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__cards {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 3rem;
+    align-items: center;
+
+    @include breakpoint($max, $desktop-sm) {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(3, 27rem);
+      grid-row-gap: 2.4rem;
+      height: 100%;
+    }
+
+    @include breakpoint($max, $tablet-sm) {
+      grid-template-rows: repeat(3, 40.7rem);
+      justify-items: center;
+    }
+  }
+
+  &__card {
+    width: 35rem;
+    height: 40.7rem;
+    background-color: $lightgrey;
+    padding: 5.7rem 4rem 4rem 4rem;
+    text-align: center;
+    position: relative;
+
+    @include flex(space-between, center, column);
+
+    @include breakpoint($max, $desktop-sm) {
+      width: 100%;
+      height: 27rem;
+      padding: 4rem;
+
+      display: grid;
+      grid-template-columns: 27rem 1fr;
+    }
+
+    @include breakpoint($max, $tablet-sm) {
+      width: 100%;
+      max-width: 35rem;
+      height: 40.7rem;
+      @include flex(space-between, center, column);
+    }
+
+    &--large {
+      @extend .prices__card;
+      height: 47rem;
+      background-color: $black;
+      color: white;
+      padding: 8.9rem 4rem 7.1rem 4rem;
+      position: relative;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 6px;
+        @include gradient(right);
+
+        @include breakpoint($max, $desktop-sm) {
+          width: 6px;
+          height: 100%;
+          @include gradient(top);
+        }
+
+        @include breakpoint($max, $tablet-sm) {
+          width: 100%;
+          height: 6px;
+          @include gradient(right);
+        }
+      }
+
+      @include breakpoint($max, $desktop-sm) {
+        width: 100%;
+        height: 27rem;
+        padding: 4rem;
+      }
+
+      @include breakpoint($max, $tablet-sm) {
+        width: 100%;
+        max-width: 35rem;
+        height: 40.7rem;
+        @include flex(space-between, center, column);
+      }
+    }
+
+    & .title {
+      font-size: 2.4rem;
+      font-weight: bold;
+      line-height: 31px;
+
+      @include breakpoint($max, $desktop-sm) {
+        grid-column: 1 / 2;
+        justify-self: flex-start;
+      }
+    }
+
+    & .description {
+      padding: 1.1rem 0 4.5rem 0;
+
+      @include breakpoint($max, $desktop-sm) {
+        padding: 0;
+        padding-bottom: 2.7rem;
+        grid-column: 1 / 2;
+        text-align: left;
+      }
+
+      @include breakpoint($max, $tablet-sm) {
+        text-align: center;
+      }
+    }
+
+    & .price {
+      @include breakpoint($max, $desktop-sm) {
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+        justify-self: flex-end;
+      }
+
+      &--monthly {
+        display: block;
+        position: absolute;
+        top: 50%;
+
+        opacity: 1;
+        animation-duration: 0.3s;
+        animation-timing-function: ease-in;
+        animation-fill-mode: forwards;
+
+        @include breakpoint($max, $desktop-sm) {
+          top: 0;
+        }
+
+        @include breakpoint($max, $tablet-sm) {
+          top: 53%;
+        }
+      }
+
+      &--yearly {
+        display: block;
+        position: absolute;
+        top: 50%;
+
+        opacity: 0;
+        animation-duration: 0.3s;
+        animation-timing-function: ease-in;
+        animation-fill-mode: forwards;
+
+        @include breakpoint($max, $desktop-sm) {
+          top: 0;
+        }
+
+        @include breakpoint($max, $tablet-sm) {
+          top: 53%;
+        }
+      }
+    }
+
+    & .subtitle {
+      @include breakpoint($max, $desktop-sm) {
+        grid-column: 2 / 3;
+        align-self: flex-start;
+        justify-self: flex-end;
+        padding-right: 5px;
+      }
+
+      @include breakpoint($max, $tablet-sm) {
+        align-self: center;
+        padding: 0;
+      }
+    }
+
+    & .cta {
+      width: 100%;
+      padding-top: 4.2rem;
+
+      @include breakpoint($max, $desktop-sm) {
+        padding: 0;
+        grid-column: 1 / 2;
+      }
+
+      & button {
+        width: 100%;
+      }
+    }
+  }
+
+  &__compare {
+    & h1 {
+      width: 100%;
+      max-width: 54rem;
+      margin: 0 auto;
+      text-align: center;
+      margin-top: 16.8rem;
+      margin-bottom: 4.4rem;
+
+      @include breakpoint($max, $desktop-sm) {
+        margin-top: 12rem;
+      }
+    }
+  }
+
+  &__table {
+    width: 100%;
+    max-width: 73.1rem;
+    height: 55.1rem;
+    margin: 0 auto;
+
+    & .row {
+      width: 100%;
+      height: 6.4rem;
+
+      display: grid;
+      grid-template-columns: 1fr 42rem;
+      justify-items: center;
+      align-items: center;
+      border-bottom: 1px solid $grey;
+
+      @include breakpoint($max, $tablet - 1) {
+        height: 11.3rem;
+        grid-template-columns: 1fr;
+      }
+
+      &--head {
+        width: 100%;
+        height: 4rem;
+        border-bottom: 1px solid black;
+
+        display: grid;
+        grid-template-columns: 1fr repeat(3, 14rem);
+
+        & p.title {
+          line-height: 1.6rem;
+          justify-self: flex-start;
+          align-self: flex-start;
+        }
+
+        & span.item {
+          align-self: flex-start;
+          justify-self: center;
+        }
+      }
+
+      & .title {
+        line-height: 1.6rem;
+        justify-self: flex-start;
+        align-self: center;
+      }
+
+      & .label-wrapper {
+        width: 100%;
+        max-width: 27rem;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-items: center;
+        align-items: center;
+
+        @include breakpoint($min, $tablet) {
+          display: none;
+        }
+      }
+
+      & .item-wrapper {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-items: center;
+        align-items: center;
+
+        @include breakpoint($max, $tablet) {
+          max-width: 27rem;
+        }
+
+        & .item {
+        }
+      }
+    }
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+  }
+}
