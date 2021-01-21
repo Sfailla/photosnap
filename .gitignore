@@ -19,5 +19,4 @@ content.txt
 
 # Avoid uploading build and cache files to github
 ######################################################
-dist
 .cache
