@@ -94,11 +94,14 @@
       & .title {
         font-size: 18px;
         font-weight: bold;
+        line-height: 24px;
       }
 
       & .author {
         font-size: 13px;
-        font-weight: bold;
+        font-weight: normal;
+        line-height: 17px;
+        margin-top: 0.5rem;
       }
 
       & .divider {

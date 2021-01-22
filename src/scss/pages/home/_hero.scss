@@ -93,6 +93,10 @@
       font-size: 3.2rem;
       line-height: 4rem;
       letter-spacing: 3.33px;
+
+      & span {
+        display: none;
+      }
     }
   }
 

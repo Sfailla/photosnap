@@ -28,6 +28,7 @@ window.addEventListener('load', () => {
 
         monthlyPrice.forEach(price => (price.style.animationName = 'fade-in'));
         monthlyPrice.forEach(price => (price.style.opacity = '1'));
+
         yearlyPrice.forEach(price => (price.style.animationName = 'fade-out'));
         yearlyPrice.forEach(price => (price.style.opacity = '0'));
       }
