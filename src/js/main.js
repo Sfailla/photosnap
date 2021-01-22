@@ -18,3 +18,5 @@ window.addEventListener(
   },
   false
 );
+
+export default toggleMobileMenu;

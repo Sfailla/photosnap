@@ -1,6 +1,9 @@
 import '../scss/main.scss';
+import toggleMobileMenu from './main';
 
 window.addEventListener('load', () => {
+  toggleMobileMenu();
+
   (function handleToggle() {
     const input = document.querySelector('#checkbox');
     const monthly = document.querySelector('.option1');
